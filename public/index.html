@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow Assignment Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Backend Developer Intern Assignment</p>
+        <h1>TaskFlow API Demo</h1>
+        <p class="hero-copy">
+          Register, log in, manage tasks, and test protected endpoints from one lightweight
+          interface.
+        </p>
+        <div class="hero-links">
+          <a href="/docs" target="_blank" rel="noreferrer">Open Swagger Docs</a>
+          <a href="/openapi.json" target="_blank" rel="noreferrer">Open OpenAPI JSON</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="card auth-card">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="login">Login</button>
+            <button class="tab-button" data-tab="register">Register</button>
+          </div>
+
+          <form id="login-form" class="form-panel">
+            <h2>Welcome back</h2>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="admin@example.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" placeholder="Admin@12345" required />
+            </label>
+            <button type="submit">Login</button>
+          </form>
+
+          <form id="register-form" class="form-panel hidden">
+            <h2>Create account</h2>
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Asha Sharma" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="asha@example.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" placeholder="StrongPass1" required />
+            </label>
+            <button type="submit">Register</button>
+          </form>
+
+          <div class="hint">
+            Default admin credentials:
+            <code>admin@example.com / Admin@12345</code>
+          </div>
+        </div>
+
+        <div class="card dashboard-card">
+          <div class="dashboard-header">
+            <div>
+              <p class="muted">Current session</p>
+              <h2 id="user-name">Not logged in</h2>
+            </div>
+            <button id="logout-button" class="secondary" type="button">Logout</button>
+          </div>
+
+          <div id="message-box" class="message hidden" role="status"></div>
+
+          <form id="task-form" class="task-form hidden">
+            <h3>Create task</h3>
+            <label>
+              Title
+              <input type="text" name="title" maxlength="120" required />
+            </label>
+            <label>
+              Description
+              <textarea name="description" rows="3" maxlength="1000"></textarea>
+            </label>
+            <div class="inline-grid">
+              <label>
+                Status
+                <select name="status">
+                  <option value="todo">Todo</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="done">Done</option>
+                </select>
+              </label>
+              <label>
+                Priority
+                <select name="priority">
+                  <option value="low">Low</option>
+                  <option value="medium">Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Due date
+              <input type="datetime-local" name="dueDate" />
+            </label>
+            <button type="submit">Save task</button>
+          </form>
+
+          <div class="section-heading">
+            <h3>Your tasks</h3>
+            <button id="refresh-button" class="secondary" type="button">Refresh</button>
+          </div>
+          <div id="task-list" class="task-list">
+            <p class="empty-state">Login to see your tasks.</p>
+          </div>
+
+          <div id="admin-panel" class="admin-panel hidden">
+            <div class="section-heading">
+              <h3>Admin user overview</h3>
+            </div>
+            <div id="user-list" class="user-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

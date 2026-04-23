@@ -1,0 +1,31 @@
+{
+  "counters": {
+    "tasks": 1,
+    "users": 1
+  },
+  "tasks": [
+    {
+      "createdAt": "2026-04-23T11:36:07.313Z",
+      "description": "Complete the shopping on time",
+      "dueDate": "2026-04-26T11:35:00.000Z",
+      "id": 1,
+      "ownerId": 1,
+      "ownerName": "System Admin",
+      "priority": "high",
+      "status": "todo",
+      "title": "Go To Shopping",
+      "updatedAt": "2026-04-23T11:36:07.313Z"
+    }
+  ],
+  "users": [
+    {
+      "createdAt": "2026-04-23T11:31:15.977Z",
+      "email": "admin@example.com",
+      "id": 1,
+      "name": "System Admin",
+      "passwordHash": "$2b$10$owvJC4w9Jx9RpIPDCUpqDuMYAxDgddj77xrjvZmuT8EUX0m4dNwO6",
+      "role": "admin",
+      "updatedAt": "2026-04-23T11:31:15.977Z"
+    }
+  ]
+}
