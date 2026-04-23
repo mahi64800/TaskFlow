@@ -137,24 +137,4 @@ The project seeds an admin account on first startup so the role-based flow can b
 
 For easy local review, this submission uses a JSON datastore at `data/db.json`. A production-oriented PostgreSQL schema is also included in [docs/postgresql-schema.sql](./docs/postgresql-schema.sql), along with a short scaling plan in [docs/scalability-note.md](./docs/scalability-note.md).
 
-## Testing
 
-Run the smoke test suite with:
-
-```bash
-npm test
-```
-
-## Why This README Works Well
-
-A strong README should answer these questions quickly:
-
-- What is the project?
-- What problem does it solve?
-- What tech stack was used?
-- How do I run it?
-- How do I test it?
-- What are the important endpoints or features?
-- What assumptions or tradeoffs were made?
-
-That is usually enough to make a project feel complete, professional, and easy to review.
